@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تمارين Sel 💪❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #fff0f6, #ffe3e8);
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ad1457;
+      margin: 20px 0;
+    }
+
+    .day-section {
+      padding: 20px;
+    }
+
+    .exercise-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      animation: fadeInUp 1s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .media img{
+      width: 100%;
+      border-radius: 10px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .media video {
+  width: 100%;
+  border-radius: 10px;
+  max-height: none;
+  height: auto;
+  object-fit: contain;
+}
+
+
+    .info h3 {
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: #f8bbd0;
+      color: #880e4f;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 768px) {
+      .exercise-card {
+        flex-direction: row;
+        align-items: center;
+      }
+      .media, .info {
+        width: 50%;
+      }
+      .media {
+        padding-left: 20px;
+      }
+    }
+
+    /* قلوب متحركة */
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      color: #f06292;
+      font-size: 20px;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(50px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+   <!--<div class="hearts">
+        <div class="heart" style="left: 10%; animation-delay: 0s;">💖</div>
+        <div class="heart" style="left: 30%; animation-delay: 2s;">💗</div>
+        <div class="heart" style="left: 50%; animation-delay: 4s;">💞</div>
+        <div class="heart" style="left: 70%; animation-delay: 6s;">💓</div>
+        <div class="heart" style="left: 90%; animation-delay: 8s;">💕</div>
+    </div>-->
+    
+    <nav style="text-align:center; padding: 15px 10px; background-color: #fce4ec; position: sticky; top: 0; z-index: 5;">
+      <a href="#upper" style="margin: 0 15px; color: #ad1457; font-weight: bold; text-decoration: none;">الجزء العلوي</a>
+      <a href="#lower" style="margin: 0 15px; color: #ad1457; font-weight: bold; text-decoration: none;">الجزء السفلي</a>
+    </nav>
+    
+  <h1>جدول التمارين</h1>
+
+  <div style="text-align:center; margin: 20px;">
+    <a href="videos/جدول تمارين شوشو.pdf" target="_blank" style="font-size: 18px; color: #ad1457; text-decoration: none; border: 2px solid #ad1457; padding: 10px 20px; border-radius: 5px;"> جدول التمارين  PDF</a>
+  </div>
+  <!-- Upper Body -->
+  <section class="day-section" id="upper">
+    <h2>الجزء العلوي - Upper Body</h2>
+
+  <!-- ما قبل التمرين -->
+    <div class="exercise-card">
+        <div class="media">
+          <video src="videos/upper worm.mp4" controls muted></video>
+        </div>
+        <div class="info">
+            <h2>ما قبل التمرين</h2>
+          <p>هنخش 5 دقايق تسخين عالمشاية او التريدميل</p>
+          <p>هنسخن الجزء العلوي كويس عشان الأصابات زي كدا</p>
+        </div>
+      </div>
+
+    <!-- تمرين 1 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/press.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Dumbell Bench Press</h3>
+        <p>دامبل بريس دفع للصدر</p>
+      </div>
+    </div>
+
+    <!-- تمرين 2 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/lat.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Lat Pulldown </h3>
+        <p>سحب لاتس واسع للظهر</p>
+      </div>
+    </div>
+
+    <!-- تمرين 3 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/row.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Seated Row</h3>
+        <p>سحب ضيق وانتي قاعدة للظهر</p>
+      </div>
+    </div>
+
+    <!-- تمرين 4 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/biceps.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Dumbell Biceps Curl</h3>
+        <p>بايسبس بالدامبل لمنطقة البايسبس فالدراع</p>
+      </div>
+    </div>
+
+    <!-- تمرين 5 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/triceps.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Triceps Rope Pushdown </h3>
+        <p>ترايسيبس بالكيبل لمنطقة الترايسبس فالدراع</p>
+      </div>
+    </div>
+
+    <!-- تمرين 6 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/shoulder.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>lateral Raises</h3>
+        <p>رفرفة جانبي بالدامبل لمنطقة الكتف الأمامي والجانبي</p>
+      </div>
+    </div>
+
+    <!-- مهم جدااا-->
+    <div class="exercise-card">
+        <div class="media">
+        </div>
+        <div class="info">
+            <h2>مهم جداا</h2>
+            <p>* كل التمارين هتحاولي تلعبيها 3 مجاميع</p>
+           <p>* كل مجموعة تجيبي 12ـ 15 تكرار</p> 
+            <p>* بين كل مجموعة ريحي دقيقة خدي نفسك واشربي مياه لازم</p>
+            <p>* الوزن تحاولي تزوديه تدريجي كل مرة او يوم عن اللاسبوع اللى قبله لما تحسي بقى اخف وقادرة تشيلي اكتر</p>            
+            <p>ركزي عالبروتين اوي فأكلك عشان هو اهم عنصر وقللي دهون واكل من برا على قد ما تقدري</p>            
+        </div>
+      </div>
+  </section>
+
+  <!-- Lower Body -->
+  <section class="day-section" id="lower">
+    <h2>الجزء السفلي - Lower Body</h2>
+
+    <!-- ما قبل التمرين -->
+    <div class="exercise-card">
+        <div class="media">
+          <video src="videos/lower worm.mp4" controls muted></video>
+        </div>
+        <div class="info">
+            <h2>ما قبل التمرين</h2>
+          <p>هنخش 5 دقايق تسخين عالمشاية او التريدميل</p>
+          <p>هنسخن الجزء السفلي كويس عشان الأصابات زي كدا</p>
+        </div>
+      </div>
+
+    <!-- تمرين 1 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/extension.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Leg Extension</h3>
+        <p>رفع امامي لمنطقة الكوادس او الفخاد الأمامية</p>
+      </div>
+    </div>
+
+    <!-- تمرين 2 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/legcurl.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Leg Curl</h3>
+        <p>سحب او تني خلفي لمنطقة الهامسترينج او الفخاد الخلفية والجلوتس او المؤخرة</p>
+      </div>
+    </div>
+
+    <!-- تمرين 3 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/legpress.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Leg Press</h3>
+        <p>دفع امامي لمنطقة الكوادس او الفخاد الأمامية</p>
+      </div>
+    </div>
+
+    <!-- تمرين 4 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/squat.mp4" controls muted></video>
+      </div>
+      <div class="info">
+        <h3>Squat</h3>
+        <p>سكوات مركب لكل عضلات الرجل امامية وخلفية , سواء هيتلعب حر او بالدامبل فايدك او بالبار</p>
+      </div>
+    </div>
+
+    <!-- تمرين 5 -->
+    <div class="exercise-card">
+      <div class="media">
+        <video src="videos/calf.mp4" controls></video>
+      </div>
+      <div class="info">
+        <h3>Calf Raises</h3>
+        <p>بتشبي على اطراف صوابعك للسمانة سواء حر او ماسكة دامبل فايدك</p>
+      </div>
+    </div>
+
+    <!-- تمرين 6 -->
+    <div class="exercise-card">
+      <div class="media">
+      <img src="videos/plank.jpg" alt="Plank">      
+      </div>
+      <div class="info">
+        <h3>Plank</h3>
+        <p>ثبات على قد ما تقدري بيشد ويشغل كل عضلات الجسم وبيزود قوة التحمل</p>
+      </div>
+    </div>
+
+    <!-- مهم جدااا-->
+    <div class="exercise-card">
+        <div class="media">
+          <video src="videos/stretch.mp4" controls muted></video>
+        </div>
+        <div class="info">
+            <h2>مهم جداا</h2>
+            <p>* كل التمارين هتحاولي تلعبيها 3 مجاميع</p>
+           <p>* كل مجموعة تجيبي 12ـ 15 تكرار</p> 
+            <p>* بين كل مجموعة ريحي دقيقة خدي نفسك واشربي مياه لازم</p>
+            <p>* الوزن تحاولي تزوديه تدريجي كل مرة او يوم عن اللاسبوع اللى قبله لما تحسي بقى اخف وقادرة تشيلي اكتر</p>
+            <p>* اعملي الأستريتشات دي يوم الرجل لما تخلصي قبل ما تروحي عشان تعملي استطالة للعضلات وميحصلش اي شد</p>
+            <p>ركزي عالبروتين اوي فأكلك عشان هو اهم عنصر وقللي دهون واكل من برا على قد ما تقدري</p>            
+
+            
+        </div>
+      </div>
+  </section>
+
+  <footer>
+    For Selyyyy 💕
+  </footer>
+
+</body>
+</html>
