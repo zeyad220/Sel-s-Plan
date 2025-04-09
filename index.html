@@ -151,7 +151,7 @@
   <!-- ما قبل التمرين -->
     <div class="exercise-card">
         <div class="media">
-          <video src="videos/upper worm.mp4" controls muted></video>
+          <video data-src="videos/upper worm.mp4" controls muted playsinline></video>
         </div>
         <div class="info">
             <h2>ما قبل التمرين</h2>
@@ -163,7 +163,7 @@
     <!-- تمرين 1 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/press.mp4" controls></video>
+        <video data-src="videos/press.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Dumbell Bench Press</h3>
@@ -174,7 +174,7 @@
     <!-- تمرين 2 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/lat.mp4" controls></video>
+        <video data-src="videos/lat.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Lat Pulldown </h3>
@@ -185,7 +185,7 @@
     <!-- تمرين 3 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/row.mp4" controls></video>
+        <video data-src="videos/row.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Seated Row</h3>
@@ -196,7 +196,7 @@
     <!-- تمرين 4 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/biceps.mp4" controls></video>
+        <video data-src="videos/biceps.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Dumbell Biceps Curl</h3>
@@ -207,7 +207,7 @@
     <!-- تمرين 5 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/triceps.mp4" controls></video>
+        <video data-src="videos/triceps.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Triceps Rope Pushdown </h3>
@@ -218,7 +218,7 @@
     <!-- تمرين 6 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/shoulder.mp4" controls></video>
+        <video data-src="videos/shoulder.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>lateral Raises</h3>
@@ -248,7 +248,7 @@
     <!-- ما قبل التمرين -->
     <div class="exercise-card">
         <div class="media">
-          <video src="videos/lower worm.mp4" controls muted></video>
+          <video data-src="videos/lower worm.mp4" controls muted playsinline></video>
         </div>
         <div class="info">
             <h2>ما قبل التمرين</h2>
@@ -260,7 +260,7 @@
     <!-- تمرين 1 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/extension.mp4" controls></video>
+        <video data-src="videos/extension.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Leg Extension</h3>
@@ -271,7 +271,7 @@
     <!-- تمرين 2 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/legcurl.mp4" controls></video>
+        <video data-src="videos/legcurl.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Leg Curl</h3>
@@ -282,7 +282,7 @@
     <!-- تمرين 3 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/legpress.mp4" controls></video>
+        <video data-src="videos/legpress.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Leg Press</h3>
@@ -293,7 +293,7 @@
     <!-- تمرين 4 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/squat.mp4" controls muted></video>
+        <video data-src="videos/squat.mp4" controls muted playsinline></video>
       </div>
       <div class="info">
         <h3>Squat</h3>
@@ -304,7 +304,7 @@
     <!-- تمرين 5 -->
     <div class="exercise-card">
       <div class="media">
-        <video src="videos/calf.mp4" controls></video>
+        <video data-src="videos/calf.mp4" controls playsinline></video>
       </div>
       <div class="info">
         <h3>Calf Raises</h3>
@@ -326,7 +326,7 @@
     <!-- مهم جدااا-->
     <div class="exercise-card">
         <div class="media">
-          <video src="videos/stretch.mp4" controls muted></video>
+          <video data-src="videos/stretch.mp4" controls muted playsinline></video>
         </div>
         <div class="info">
             <h2>مهم جداا</h2>
@@ -345,6 +345,28 @@
   <footer>
     For Selyyyy 💕
   </footer>
+<script>
+  const lazyVideos = document.querySelectorAll('video');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        if (video.dataset.src) {
+          video.src = video.dataset.src;
+          video.load();
+          observer.unobserve(video);
+        }
+      }
+    });
+  });
+
+  lazyVideos.forEach(video => {
+    if (video.dataset.src) {
+      observer.observe(video);
+    }
+  });
+</script>
 
 </body>
 </html>
